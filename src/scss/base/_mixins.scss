@@ -1,0 +1,13 @@
+/** Media Queries **/
+
+@mixin media_query ($screen) {
+    @media (min-width: $screen) {
+        @content;
+    }
+}
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
