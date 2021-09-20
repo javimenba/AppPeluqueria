@@ -30,6 +30,7 @@ async function mostrarServicios() {
       // Generar div contenedor de servicio Generar div     contenedor de servicio
       const servicioDiv = document.createElement("DIV");
       servicioDiv.classList.add("servicio");
+      servicioDiv.dataset.idServicio = id;
 
       // Selecciona un sercio para la cita
       servicioDiv.onclick = seleccionarServicio;
@@ -49,9 +50,15 @@ async function mostrarServicios() {
 function seleccionarServicio(e) {
   let elemento;
   // Forzar que el elemento al cual le damos click sea el DIV
+  // Agrega y quita una clase en la selección
   if (e.target.tagName === "P") {
     elemento = e.target.parentElement;
   } else {
     elemento = e.target;
+  }
+  if (elemento.classList.contains("seleccionado")) {
+    elemento.classList.remove("seleccionado");
+  } else {
+    elemento.classList.add("seleccionado");
   }
 }
