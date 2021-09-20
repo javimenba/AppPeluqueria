@@ -51,7 +51,6 @@ function seleccionarServicio(e) {
   let elemento;
   // Forzar que el elemento al cual le damos click sea el DIV
   // Agrega y quita una clase en la selección
-  // holis
 
   if (e.target.tagName === "P") {
     elemento = e.target.parentElement;
