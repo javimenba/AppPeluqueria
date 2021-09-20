@@ -51,8 +51,7 @@ function seleccionarServicio(e) {
   let elemento;
   // Forzar que el elemento al cual le damos click sea el DIV
   // Agrega y quita una clase en la selección
-  // commu
-
+  //Prueba un millon
   if (e.target.tagName === "P") {
     elemento = e.target.parentElement;
   } else {
